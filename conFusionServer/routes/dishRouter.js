@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
 const Dishes = require('../models/dishes');
 
 const dishRouter = express.Router();
@@ -39,7 +38,7 @@ dishRouter.route('/')
         res.setHeader('Content-Type', 'application/json');
         res.json(resp);
     }, (err) => next(err))
-    .catch((err) => next(err));    
+    .catch((err) => next(err));
 });
 
 dishRouter.route('/:dishId')
